@@ -1,4 +1,4 @@
-package com.bj58.hds.nettyTest.echoServer;
+package com.bj58.hds.nettyTest.echoDemo;
 
 
 import io.netty.bootstrap.ServerBootstrap;
@@ -6,14 +6,13 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
-import java.security.cert.CertificateException;
+import java.util.Scanner;
 
 /**
  * 输出任何来自客户端的数据
@@ -57,7 +56,6 @@ public class EchoServer {
 
             //启动服务器
             ChannelFuture future =  serverBootstrap.bind(PORT).sync();
-
             //在服务器关闭后关闭通道
             future.channel().closeFuture().sync();
         }catch (Exception e){

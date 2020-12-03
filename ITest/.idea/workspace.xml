@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fee6db82-958c-40bb-b7ff-5f366d6b4d89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../netty-4.1.54.Final/.idea/netty-4.1.54.Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoDemo/EchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoDemo/EchoClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoServer/EchoClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoServer/EchoClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoServer/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoDemo/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoServer/EchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bj58/hds/nettyTest/echoDemo/EchoServerHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +56,33 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EchoClient">
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bj58.hds.nettyTest.echoDemo.EchoClient" />
+      <module name="ITest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bj58.hds.nettyTest.echoDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bj58.hds.nettyTest.echoDemo.EchoServer" />
+      <module name="ITest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bj58.hds.nettyTest.echoDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="ITest" />
       <option name="VM_PARAMETERS" />
@@ -100,6 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EchoClient" />
+        <item itemvalue="Application.EchoServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -116,7 +152,7 @@
       <workItem from="1606873722241" duration="1634000" />
       <workItem from="1606900385281" duration="598000" />
       <workItem from="1606960120601" duration="1544000" />
-      <workItem from="1606963644559" duration="17160000" />
+      <workItem from="1606963644559" duration="19860000" />
     </task>
     <task id="LOCAL-00001" summary="2020-12-03:DEV:EchoDemo">
       <created>1606984622201</created>
@@ -132,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606988317090</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2020-12-03:DEV:EchoDemo">
+      <created>1606989408346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606989408346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,26 +195,44 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="422" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1606962771554" />
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1606988314802">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1606992176111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606988314802" />
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606992176111" />
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606989404041" />
     <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1606983327482">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606983327482" />
-    <state x="632" y="303" key="Github.ShareDialog" timestamp="1606989300494">
+    <state x="632" y="303" key="Github.ShareDialog" timestamp="1606989857691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="632" y="303" key="Github.ShareDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606989857691" />
     <state x="632" y="303" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606989300494" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1606991871247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606991871247" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1606991871247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606991871247" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1606991871247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606991871247" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1606991871247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606991871247" />
     <state x="600" y="-863" key="NewModule_or_Project.wizard" timestamp="1606983308686">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="600" y="-863" key="NewModule_or_Project.wizard/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606983308686" />
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1606988337559">
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1606989410627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606988337559" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606989410627" />
     <state x="752" y="-643" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606983185552">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
