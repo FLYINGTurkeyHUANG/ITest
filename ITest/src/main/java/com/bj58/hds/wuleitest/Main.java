@@ -18,8 +18,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        String[] province = {"山西","辽宁","山东","河南","湖北","湖南","贵州","陕西","甘肃","青海","河北","吉林","黑龙江","江苏","浙江","内蒙"};
-        String[] province = {"江苏","浙江","内蒙"};
+        String[] province = {"广西省","山西省","辽宁省","山东省","河南省","湖北省","湖南省","贵州省","陕西省","甘肃省","青海省","河北省","吉林省","黑龙江省","江苏省","浙江省","内蒙省"};
         for(int i=0;i<province.length;i++){
             System.out.println(province[i]);
             String path = "D:/"+province[i];
