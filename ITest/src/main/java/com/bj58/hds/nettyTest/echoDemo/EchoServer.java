@@ -12,8 +12,6 @@ import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
-import java.util.Scanner;
-
 /**
  * 输出任何来自客户端的数据
  * */
@@ -48,6 +46,7 @@ public class EchoServer {
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ChannelPipeline pipeline = ch.pipeline();
                             if(sslContext != null){
+                                //添加SSL加密/解密处理的Handler，在数据入站时进行解密，在数据出站时进行加密
                                 pipeline.addLast(sslContext.newHandler(ch.alloc()));
                             }
                             pipeline.addLast(echoServerHandler);

@@ -11,7 +11,6 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 
 import javax.net.ssl.SSLException;
-import java.util.Scanner;
 
 /**
  * 向服务端发送数据即可
