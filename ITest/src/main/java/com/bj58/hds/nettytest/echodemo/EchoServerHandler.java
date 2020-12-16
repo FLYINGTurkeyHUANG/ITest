@@ -1,11 +1,9 @@
-package com.bj58.hds.nettyTest.echoDemo;
+package com.bj58.hds.nettytest.echodemo;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.util.CharsetUtil;
 
 /**
  * 服务端处理器

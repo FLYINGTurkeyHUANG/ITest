@@ -1,4 +1,4 @@
-package com.bj58.hds.nettyTest.echoDemo;
+package com.bj58.hds.nettytest.echodemo;
 
 
 import io.netty.bootstrap.ServerBootstrap;
