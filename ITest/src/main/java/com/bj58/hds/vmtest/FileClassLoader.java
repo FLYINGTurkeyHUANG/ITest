@@ -1,10 +1,13 @@
 package com.bj58.hds.vmtest;
 
+import com.sun.prism.shader.Solid_TextureYV12_AlphaTest_Loader;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 public class FileClassLoader extends ClassLoader{
 
@@ -106,7 +109,6 @@ public class FileClassLoader extends ClassLoader{
             System.out.println("未触发静态代码块");
             Object car = carClass.newInstance();//newInstance()方法会执行构造方法，因此可以触发类的初始化，进而执行static代码块
             System.out.println("触发静态代码块");
-
             setMethod.invoke(car,"哈哈");
             System.out.println(getMethod.invoke(car));
             System.out.println(car.getClass());
