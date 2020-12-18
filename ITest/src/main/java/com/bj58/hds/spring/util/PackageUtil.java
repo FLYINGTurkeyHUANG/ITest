@@ -66,7 +66,7 @@ public class PackageUtil {
             return className;
         }
         for(File childFile:childFiles){
-            if(childFile.isDirectory()){
+            if(childFile.isDirectory()){//目录，则根据是否读取子文件夹下的值判断
                 if(childRead){
                     className.addAll(getClassNameByFile(childFile.getPath(),childRead));
                 }
@@ -89,10 +89,10 @@ public class PackageUtil {
      * */
     private static List<String> getClassNameByJar(String jarPath,boolean childRead) throws UnsupportedEncodingException {
         List<String> className = new ArrayList<>();
-        String[] jarInfo = jarPath.split("!");
+        String[] jarInfo = jarPath.split("!");//需要从所有jar中搜索包的时候会拼接  jar路径!/包路径
         String jarFilePath = jarInfo[0].substring(jarInfo[0].indexOf("/"));
         jarFilePath = URLDecoder.decode(jarFilePath,"utf-8");
-        String packagePath = jarInfo[1].substring(1);
+        String packagePath = jarInfo[1].substring(1);//切分后获取包路径
         try{
             JarFile jarFile = new JarFile(jarFilePath);
             Enumeration<JarEntry> entries = jarFile.entries();
@@ -102,12 +102,12 @@ public class PackageUtil {
                 if(entryName.endsWith(".class")){
                     if(childRead){
                         if(entryName.startsWith(packagePath)){
-                            entryName = entryName.replace("/",".").substring(0,entryName.lastIndexOf("."));
+                            entryName = entryName.replace("\\",".").substring(0,entryName.lastIndexOf("."));
                             className.add(entryName);
                         }
                     }
                 }else{
-                    int index = entryName.lastIndexOf("/");
+                    int index = entryName.lastIndexOf("\\");
                     String myPackagePath;
                     if (index != -1) {
                         myPackagePath = entryName.substring(0, index);
@@ -115,7 +115,7 @@ public class PackageUtil {
                         myPackagePath = entryName;
                     }
                     if (myPackagePath.equals(packagePath)) {
-                        entryName = entryName.replace("/", ".").substring(0, entryName.lastIndexOf("."));
+                        entryName = entryName.replace("\\", ".").substring(0, entryName.lastIndexOf("."));
                         className.add(entryName);
                     }
                 }
@@ -135,7 +135,7 @@ public class PackageUtil {
      * @return 类的完整名称
      */
     private static List<String> getClassNameByJars(URL[] urls, String packagePath, boolean childPackage) throws UnsupportedEncodingException {
-        List<String> myClassName = new ArrayList<String>();
+        List<String> className = new ArrayList<String>();
         if (urls != null) {
             for (int i = 0; i < urls.length; i++) {
                 URL url = urls[i];
@@ -145,10 +145,10 @@ public class PackageUtil {
                     continue;
                 }
                 String jarPath = urlPath + "!/" + packagePath;
-                myClassName.addAll(getClassNameByJar(jarPath, childPackage));
+                className.addAll(getClassNameByJar(jarPath, childPackage));
             }
         }
-        return myClassName;
+        return className;
     }
 
 }
