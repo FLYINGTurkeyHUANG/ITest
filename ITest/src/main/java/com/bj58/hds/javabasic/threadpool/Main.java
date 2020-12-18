@@ -1,4 +1,4 @@
-package com.bj58.hds.threadpooltest;
+package com.bj58.hds.javabasic.threadpool;
 
 public class Main {
     public static void main(String[] args){

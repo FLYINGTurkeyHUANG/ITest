@@ -1,4 +1,4 @@
-package com.bj58.hds.wuleitest;
+package com.bj58.hds.wulei;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

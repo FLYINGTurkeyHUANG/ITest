@@ -1,4 +1,4 @@
-package com.bj58.hds.deadlocktest;
+package com.bj58.hds.javabasic.deadlock;
 
 
 /**
