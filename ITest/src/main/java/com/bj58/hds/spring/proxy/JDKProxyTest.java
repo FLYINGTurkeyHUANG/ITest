@@ -15,5 +15,6 @@ public class JDKProxyTest {
         AnimalInvocationHandler handler = new AnimalInvocationHandler(new Cat());
         Animal animalProxy = JDKProxyFactory.getAnimalProxy("cat",handler);
         animalProxy.move();
+
     }
 }

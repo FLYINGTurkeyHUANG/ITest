@@ -6,7 +6,7 @@ import com.bj58.hds.spring.interfaces.Mobile;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
-
+<#--传入接口的名称list即可-->
 public class JDKProxyFactory {
 
     private static ApplicationContext context;

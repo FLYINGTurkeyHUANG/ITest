@@ -15,32 +15,36 @@ import java.util.Map;
  */
 public class TextGeneratorUtil {
 
-    public static void generate(String template, String targetDir) {
+    /** 模板文件的存放路径 */
+    public static final String TEMPLATEDIR = System.getProperty("user.dir")+"/ITest/src/main/resources/templates";
+
+    /**
+     * 生成代理工厂的java文件
+     * @param templateName 模板文件名
+     * @param targetDir 生成文件的存放路径
+     * @param data 模板文件中所需要的的参数
+     * */
+    public static void generateProxyFactory(String templateName, String targetDir,Map<String,Object> data) {
         // step1 创建freeMarker配置实例
         Configuration configuration = new Configuration();
         Writer out = null;
         try {
             // step2 获取模版路径
-            configuration.setDirectoryForTemplateLoading(new File(System.getProperty("user.dir")+"/ITest/src/main/resources/templates"));
+            configuration.setDirectoryForTemplateLoading(new File(TEMPLATEDIR));
 
-            // step3 创建数据模型
-            Map<String, Object> dataMap = new HashMap<String, Object>();
-            List<String> interfaces = new ArrayList<>();
-            interfaces.add("Animal");
-            interfaces.add("Mobile");
-            dataMap.put("interfaces",interfaces);
+            // step3 使用传入数据模型
 
             // step4 加载模版文件
-            Template templates = configuration.getTemplate("JDKProxyFactory.ftl");
+            Template template = configuration.getTemplate(templateName+".ftl");
 
             // step5 生成数据
-            File docFile = new File( System.getProperty("user.dir")+"/ITest/src/main/java/com/bj58/hds/spring/proxy/factory/JDKProxyFactory.java");
+            File docFile = new File(targetDir);
             System.out.println("docFile="+docFile.getPath());
             out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(docFile)));
 
             // step6 输出文件
-            templates.process(dataMap, out);
-            System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^JDKProxyFactory.java 文件创建成功 !");
+            template.process(data, out);
+            System.out.println(templateName + " 文件创建成功 !");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -55,14 +59,12 @@ public class TextGeneratorUtil {
     }
 
     public static void main(String[] args) throws IOException {
-
-        System.out.println("D:/learnspace/ITest/ITest/src/main/java/com/bj58/hds/spring/proxy/factory/JDKProxyFactory.java");
-        System.out.println(System.getProperty("user.dir"));
-        File dir = new File("");
-        System.out.println(dir.getAbsolutePath());
-        System.out.println(dir.getCanonicalPath());
-
-        generate("","");
+        List<String> interfaces = new ArrayList<>();
+        interfaces.add("Animal");
+        interfaces.add("Mobile");
+        Map<String,Object> data = new HashMap<>();
+        data.put("interfaces",interfaces);
+        generateProxyFactory("JDKProxyFactory",System.getProperty("user.dir")+"/ITest/src/main/java/com/bj58/hds/spring/proxy/factory/JDKProxyFactory.java",data);
     }
 
 }

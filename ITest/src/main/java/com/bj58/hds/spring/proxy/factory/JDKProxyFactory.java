@@ -6,11 +6,10 @@ import com.bj58.hds.spring.interfaces.Mobile;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
-
 public class JDKProxyFactory {
 
     private static ApplicationContext context;
-    
+
     public JDKProxyFactory(){}
 
     /**
