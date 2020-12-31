@@ -1,16 +1,11 @@
 package com.bj58.hds.spring.proxy.factory;
 
-import com.bj58.hds.spring.component.Cat;
 import com.bj58.hds.spring.container.ApplicationContext;
 import com.bj58.hds.spring.interfaces.Animal;
 import com.bj58.hds.spring.interfaces.Mobile;
-import com.bj58.hds.spring.proxy.interceptor.AnimalMethodInterceptor;
 import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
 
 public class CGLIBProxyFactory {
     private static ApplicationContext context;

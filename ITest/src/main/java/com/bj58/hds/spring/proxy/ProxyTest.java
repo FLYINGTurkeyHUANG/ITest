@@ -7,8 +7,6 @@ import com.bj58.hds.spring.proxy.factory.CGLIBProxyFactory;
 import com.bj58.hds.spring.proxy.factory.JDKProxyFactory;
 import com.bj58.hds.spring.proxy.handler.AnimalInvocationHandler;
 import com.bj58.hds.spring.proxy.interceptor.AnimalMethodInterceptor;
-import net.sf.cglib.core.DebuggingClassWriter;
-import net.sf.cglib.proxy.Enhancer;
 
 /**
  * 两种代理方式的示例
@@ -22,6 +20,5 @@ public class ProxyTest {
 
         animalProxy = CGLIBProxyFactory.getAnimalProxy("cat",new AnimalMethodInterceptor());
         animalProxy.move();
-
     }
 }
