@@ -161,5 +161,7 @@ public class LRUCache {
 
         System.out.println(lruCache.get("001"));
         System.out.println(lruCache.get("006"));
+
+        System.out.println(String.format("\\u%s", Integer.toHexString((int)0xE001).toUpperCase()));
     }
 }

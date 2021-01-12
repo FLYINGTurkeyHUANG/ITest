@@ -1,11 +1,6 @@
 package com.bj58.hds.javabasic.threadpool;
 
-public class Main {
-    public static void main(String[] args){
-//        final ExecutorService executorService = Executors.newFixedThreadPool(10);
-        Main main = new Main();
-        main.testTakeAndPut();
-    }
+public class HeapSort {
 
     public void testTakeAndPut(){
         int[] array = {1,4,5,7,8,6,9,0};
