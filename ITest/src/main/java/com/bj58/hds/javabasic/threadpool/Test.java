@@ -45,7 +45,14 @@ public class Test {
         System.out.println(new Date());
         threadPool.shutdown();
 
-
+        System.out.println("MyPool Test...");
+        MyPool myPool = new MyPool(2,8,5, TimeUnit.SECONDS,new LinkedBlockingQueue<>());
+        try {
+            myPool.invokeAll(taskList);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        myPool.shutdown();
     }
 
 }
