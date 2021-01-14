@@ -1,0 +1,9 @@
+{
+  "driverTemplateFields":[
+    {"fieldName":"trueName","necessary":1,"type":0,"resumeField":["trueName"]},
+    {"fieldName":"mobile","necessary":1,"type":0,"resumeField":["mobile"]},
+    {"fieldName":"target","necessary":1,"type":0,"resumeField":["salary","targetAreaId","targetCateId"]},
+    {"fieldName":"license","necessary":1,"type":0,"resumeField":["license"]},
+    {"fieldName":"selfIntroduction","necessary":1,"type":0,"resumeField":["selfIntroduction"]}
+  ]
+}

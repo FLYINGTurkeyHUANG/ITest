@@ -19,12 +19,12 @@ public class TextGeneratorUtil {
     public static final String TEMPLATEDIR = System.getProperty("user.dir")+"/ITest/src/main/resources/templates";
 
     /**
-     * 生成代理工厂的java文件
+     * 根据模板生成对应文件
      * @param templateName 模板文件名
      * @param targetDir 生成文件的存放路径
      * @param data 模板文件中所需要的的参数
      * */
-    public static void generateProxyFactory(String templateName, String targetDir,Map<String,Object> data) {
+    public static void generate(String templateName, String targetDir,Map<String,Object> data) {
         // step1 创建freeMarker配置实例
         Configuration configuration = new Configuration();
         Writer out = null;
@@ -64,7 +64,7 @@ public class TextGeneratorUtil {
         interfaces.add("Mobile");
         Map<String,Object> data = new HashMap<>();
         data.put("interfaces",interfaces);
-        generateProxyFactory("JDKProxyFactory",System.getProperty("user.dir")+"/ITest/src/main/java/com/bj58/hds/spring/proxy/factory/JDKProxyFactory.java",data);
+        generate("JDKProxyFactory",System.getProperty("user.dir")+"/ITest/src/main/java/com/bj58/hds/spring/proxy/factory/JDKProxyFactory.java",data);
     }
 
 }
