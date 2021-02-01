@@ -1,4 +1,4 @@
-package com.bj58.hds.javabasic.designpattern;
+package com.bj58.hds.designpattern;
 
 
 /**

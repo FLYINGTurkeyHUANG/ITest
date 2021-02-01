@@ -1,4 +1,4 @@
-package com.bj58.hds.javabasic.designpattern;
+package com.bj58.hds.designpattern;
 
 
 import java.util.Random;
@@ -44,8 +44,8 @@ public class Observer {
         Observer tiredObserver = new Observer();
         Panda panda = new Panda(100,false,false);
         panda.register("weight",weightObserver);
-        panda.register("hungary",weightObserver);
-        panda.register("tired",weightObserver);
+        panda.register("hungary",hungaryObserver);
+        panda.register("tired",tiredObserver);
         Random random = new Random();
         for(;;){
             panda.setWeight(random.nextInt(200));
