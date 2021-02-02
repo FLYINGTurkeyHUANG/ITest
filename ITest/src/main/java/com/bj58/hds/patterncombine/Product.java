@@ -1,6 +1,6 @@
 package com.bj58.hds.patterncombine;
 
-public class Product implements Cloneable {
+public abstract class Product implements Cloneable {
 
     /** 产品名称 */
     private String name;
@@ -8,11 +8,15 @@ public class Product implements Cloneable {
     /** 属性是否可变 */
     private boolean canChanged;
 
+    /** 产品类型 */
+    private String type;
+
     /** 生产一个新的产品 */
-    public Product(ProductFactory productFactory,String name){
+    public Product(ProductFactory productFactory,String name,String type){
         if(productFactory.isPermittedCreate()){
             canChanged = true;
             this.name = name;
+            this.type = type;
         }
     }
 
@@ -24,6 +28,14 @@ public class Product implements Cloneable {
         if(canChanged){
             this.name = name;
         }
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

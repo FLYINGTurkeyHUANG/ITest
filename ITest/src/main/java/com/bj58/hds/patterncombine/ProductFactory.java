@@ -5,10 +5,18 @@ public class ProductFactory {
     private boolean permittedCreate = false;
 
     /** 创建一个产品 */
-    public Product createProduct(String name){
+    public Product createProduct(String name,String type) throws Exception{
         //修改权限，允许创建
         permittedCreate = true;
-        Product product= new Product(this,name);
+        Product product;
+        if("A".equals(type)){
+            product= new ProductA(this,name);
+        }else if("B".equals(type)){
+            product= new ProductB(this,name);
+        }else{
+            throw new Exception("不支持的产品类型");
+        }
+
         //产生一个创建事件
         new ProductEvent(product,ProductEventType.NEW_PRODUCT);
         return product;
