@@ -1,4 +1,4 @@
-package com.bj58.hds.encrypt;
+package com.bj58.hds.util.encrypt;
 import java.security.MessageDigest;
 
 public class MyMD5 {

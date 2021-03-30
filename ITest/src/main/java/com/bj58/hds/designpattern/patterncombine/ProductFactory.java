@@ -1,4 +1,4 @@
-package com.bj58.hds.patterncombine;
+package com.bj58.hds.designpattern.patterncombine;
 
 public class ProductFactory {
     /** 是否可以创建一个产品 */

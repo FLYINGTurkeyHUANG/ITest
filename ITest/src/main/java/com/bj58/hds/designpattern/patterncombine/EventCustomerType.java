@@ -1,4 +1,4 @@
-package com.bj58.hds.patterncombine;
+package com.bj58.hds.designpattern.patterncombine;
 
 /**
  * 消费类型需要包含事件类型

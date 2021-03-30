@@ -1,4 +1,4 @@
-package com.bj58.hds.patterncombine;
+package com.bj58.hds.designpattern.patterncombine;
 
 public class Main {
     public static void main(String[] args) throws Exception {

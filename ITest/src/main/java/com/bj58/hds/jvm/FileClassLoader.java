@@ -1,4 +1,4 @@
-package com.bj58.hds.vm;
+package com.bj58.hds.jvm;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -100,7 +100,7 @@ public class FileClassLoader extends ClassLoader{
 //            carClass = Class.forName("com.bj58.hds.vmtest.Car");//等同于Class.forName("com.bj58.hds.vmtest.Car",true,fileClassLoader);不过类加载器会根据调用者的类加载器设置
             //通过类加载器加载类时并不会触发类的初始化，不会执行静态块，只加载。
             //加载完成后会将二进制的字节流存放到方法区，在堆区则会生成一个java.lang.Class对象封装类在方法去内的数据结构并提供访问方法区数据的接口
-            carClass = fileClassLoader.loadClass("com.bj58.hds.vm.Car");
+            carClass = fileClassLoader.loadClass("com.bj58.hds.jvm.Car");
             Method getMethod = carClass.getMethod("getName");
             Method setMethod = carClass.getMethod("setName",String.class);
             System.out.println("未触发静态代码块");
