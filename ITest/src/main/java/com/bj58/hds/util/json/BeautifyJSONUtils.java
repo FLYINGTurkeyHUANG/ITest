@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class BeautifyJSONUtils {
+
     private static final char SPACE_CHAR = ' ';
 
     private static final int INDENT_SIZE = 2;
 
+    //当前缩进深度
     private static int callDepth = 0;
 
     public static String beautify(JSONObject jsonObject) {
@@ -32,21 +34,22 @@ public class BeautifyJSONUtils {
             sb.append("\"");
             sb.append(": ");
 
-            if (value instanceof JSONObject) {
+            //处理value
+            if (value instanceof JSONObject) {//value为json对象
                 sb.append("\n");
                 sb.append(beautify((JSONObject) value));
-            } else if (value instanceof JSONArray){
+            } else if (value instanceof JSONArray){//value为json数组
                 sb.append("\n");
                 sb.append(beautify((JSONArray) value));
-            } else if (value instanceof String) {
+            } else if (value instanceof String) {//value为字符串
                 sb.append("\"");
                 sb.append(value);
                 sb.append("\"");
-            } else {
+            } else {//value为数字、布尔值等
                 sb.append(value);
             }
 
-            if (i < size - 1) {
+            if (i < size - 1) {//逗号分隔
                 sb.append(",");
             }
         }
@@ -98,6 +101,7 @@ public class BeautifyJSONUtils {
         return sb.toString();
     }
 
+    //缩进
     private static String getIndentString() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < callDepth * INDENT_SIZE; i++) {
