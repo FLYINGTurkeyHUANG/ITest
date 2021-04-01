@@ -22,9 +22,9 @@ public class WeTalkClient {
         this.hostname = hostname;
         this.port = port;
     }
-
+    //open() --> connect() --> ... --> close()
     public void start() throws IOException {
-        // 打开一个套接字通道，并向服务端发起连接
+        // 打开一个网络套接字通道，并向服务端发起连接
         SocketChannel channel = SocketChannel.open();
         channel.connect(new InetSocketAddress(hostname, port));
 

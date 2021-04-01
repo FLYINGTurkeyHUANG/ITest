@@ -19,9 +19,9 @@ public class WeTalkServer {
     WeTalkServer(int port) {
         this.port = port;
     }
-
+    //ssc.open() --> ssc.socket() --> socket.bind() --> listen() --> ssc.accept() --> ... --> close()
     public void start() throws IOException {
-        // 创建服务端套接字通道，监听端口，并等待客户端连接
+        // 创建服务端网络套接字通道，监听端口，并等待客户端连接
         ServerSocketChannel ssc = ServerSocketChannel.open();
         ssc.socket().bind(new InetSocketAddress(port));
         System.out.println("服务端已启动，正在监听 " + port + " 端口......");
